@@ -1,0 +1,36 @@
+h1{
+	font-size: 60px;
+	width: 150px;
+}
+
+a.buy {
+    color: #2da1c1;
+    font-size: small;
+    text-decoration: none;
+    float: right;
+}
+a.action:link, a.action:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.action:hover, a.action:active {
+  background-color: white;
+}
+
+a.act1:link, a.act1:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.act1:hover, a.act1:active {
+  background-color: white;
+}
