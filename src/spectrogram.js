@@ -59,7 +59,7 @@ function Spectrogram(id) {
         var value = 0;
         for (var y = 0; y < self.height; y++) {
             var x = col;
-            self.setPixel(x, y, value, value, value, 255)
+            self.setPixel(x, y, value, value, value, 255);
         }
     }
 
@@ -104,7 +104,7 @@ function Spectrogram(id) {
             rgb.B = 0;
         }
 
-        return [rgb.R, rgb.G, rgb.B, 1].map(function(d) { return parseInt(d * 255, 10)})
+        return [rgb.R, rgb.G, rgb.B, 1].map(function(d) { return parseInt(d * 255, 10)});
     }
 
     self.colorizeData = function(data) {
@@ -136,5 +136,5 @@ function Spectrogram(id) {
     self.animate = function() {
         self.drawFrame();
         requestAnimationFrame(self.animate);
-    }
+    };
 }
