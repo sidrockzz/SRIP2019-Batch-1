@@ -7,7 +7,7 @@ function Spectrogram(id) {
     self.canvas = document.getElementById(id);
     self.width  = self.canvas.width;
     self.height = self.canvas.height;
-    self.ctx = self.canvas.getContext('2d');
+    self.ctx = self.canvas.getContext("2d");
     self.imageData = self.ctx.getImageData(0, 0, self.width, self.height);
 
     self.data = self.imageData.data;
@@ -43,7 +43,7 @@ function Spectrogram(id) {
 
     self.getPixel = function(x, y) {
         var value = self.data32[y * self.width + x];
-        var channels = self.uint32Touint8(value)
+        var channels = self.uint32Touint8(value);
         return channels;
     }
 
@@ -52,7 +52,7 @@ function Spectrogram(id) {
         self.uint8array[2] = uint32 >> 16 & 0xff;
         self.uint8array[1] = uint32 >> 8 & 0xff;
         self.uint8array[0] = uint32 & 0xff;
-        return data
+        return data;
     }
 
     self.drawColumn = function() {
@@ -72,7 +72,7 @@ function Spectrogram(id) {
             self.dataBuffer[i] = freqByteData[(self.analyser.frequencyBinCount - 1) - i] / 255.0;
         }
 
-        return self.dataBuffer
+        return self.dataBuffer;
     }
 
     self.color = function(value) {
@@ -126,7 +126,7 @@ function Spectrogram(id) {
 
     self.drawFrame = function(data) {
         var data = data || self.getData();
-        var colorData = self.colorizeData(data)
+        var colorData = self.colorizeData(data);
 
         self.addColumn(colorData);
         self.imageData.data.set(self.buf8);
