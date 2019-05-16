@@ -104,7 +104,8 @@ function Spectrogram(id) {
             rgb.B = 0;
         }
 
-        return [rgb.R, rgb.G, rgb.B, 1].map(function(d) { return parseInt(d * 255, 10)});
+        return [rgb.R, rgb.G, rgb.B, 1].map(function(d);
+                                            { return parseInt(d * 255, 10)});
     }
 
     self.colorizeData = function(data) {
